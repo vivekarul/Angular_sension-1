@@ -1,0 +1,71 @@
+<div class="container-fluid">
+
+  <div class="row">
+              <div class="col-xs-4">
+                            <h2> Interpolation</h2>
+                           
+                            <p> {{city}}   </p>
+
+                            <p>{{mobile}}</p>
+                            
+                            <p>{{data[0]}}</p>
+
+                            <p>{{data[1]}}</p>
+
+
+
+              </div>
+
+
+              <div class="col-xs-4">
+                            <h2>Directives  NgFor (like for loop)</h2>
+
+                            <ul *ngFor="let mydata of data">
+                              <li>{{mydata}}</li>
+                            </ul>
+              </div>
+
+
+
+               <div class="col-xs-4">
+                  <h2> Directive ngIF</h2>
+                 <p> It checks whether the variable has value or not</p>
+
+                  <h2   *ngIf="mobile==1133">   <p>  Guhan </p>   </h2>
+
+                  <h2   *ngIf="mobile!=1133">   <p>  Vivek </p>   </h2>
+
+
+               </div>
+
+
+  </div>
+
+
+
+  <div class="row">
+
+      <div class="col-xs-4">
+                 <h2> Image</h2>
+                  <div  *ngIf="mobile==1122">
+
+                      <img src="assets/images/swiggy-2.jpg">
+
+                  </div>
+                
+      </div>
+      <div class="col-xs-4">
+
+
+      </div>
+      <div class="col-xs-4">
+
+
+
+      </div>
+
+  </div>
+
+
+
+</div>
