@@ -12,7 +12,25 @@ export class AppComponent {
     mobile:number=1122;
 
     data:any =["Raja","Guhan", "Anbu", "Kamal",78678,"kesav"];//array
-    //for stores more than one values
+
+   // One way
+    getValue:string;
+    check(x:string)
+    {
+       this.getValue=x;
+    }
+
+    //Attribute binding
+    imageUrl:any="assets/images/swiggy-2.jpg";
+
+    getImage()
+    {
+      this.imageUrl="assets/images/facebook.JPG";
+    }
+
+     myid:any="p1";
+
+     myclass:any="c1";
 
 
 
