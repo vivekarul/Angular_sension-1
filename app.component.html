@@ -1,61 +1,51 @@
 <div class="container-fluid">
    <div class="row">
       
-    <div class="col-xs-4">
+                  <div class="col-xs-4">
+                            <h2> Display the Json Data </h2>
+                            <p>{{myjson.name}}</p>
+                            <p>{{myjson.age}}</p>
 
-      <h2>Data Binding (1 way)</h2>
+                        
 
+                  </div>
 
-       Name:<input #name > 
-       <button (click)="check(name.value)">click</button>
+                  <div class="col-xs-4">
 
-       <p> {{getValue}} </p>
-
-    </div>
-
-    <div class="col-xs-4">
-       <h2> Two way binding</h2>
-       <!-- import formsmodule in app.module.ts -->
-
-       Mobile: <input [(ngModel)]="getMobile">
-       <br>
-       <p>{{getMobile}} </p>
-
-    </div>
-    <div class="col-xs-4">
-
-      <h2> Attribute binding</h2>
-
-      <img [src]="imageUrl"> 
-
-      <button (click)="getImage()"> change</button>
-
-   </div>
+                    <h2> Display json data in table</h2>
 
 
-   <div class="row">
+                    <table>
+                      <caption>Semester1</caption>
+                      <tr><th>Name</th><th>Tamil</th><th>English</th></tr>
 
-    <div class="col-xs-4">
-
-      <h2> Bind the css</h2>
-
-       <p [id]="myid">  I am id... </p>
-
-       <p [class]="myclass"> I am class </p>
-
-
-    </div>
-    <div class="col-xs-4">
-
-    </div>
-
-    <div class="col-xs-4">
-
-    </div>
+                        <tr *ngFor="let list of college.sem1">
+                          <td> {{list.name}}</td>
+                          <td>{{list.tamil}}</td>
+                          <td> {{list.eng}}</td>
+                          
+                        </tr>
+                    </table>
 
 
-   </div>
 
+                    
+                  </div>
+                  <div class="col-xs-4">
+                        
+                      <table>
+                          <caption>Semester2</caption>
+                          <tr><th>Name</th><th>Tamil</th><th>English</th></tr>
+    
+                            <tr *ngFor="let list of college.sem2">
+                              <td> {{list.name}}</td>
+                              <td>{{list.tamil}}</td>
+                              <td> {{list.eng}}</td>
+                              
+                            </tr>
+                        </table>
+                    
+                </div>
 
 
    </div>

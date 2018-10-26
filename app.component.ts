@@ -7,31 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    city:String ="Chennai";
-    
-    mobile:number=1122;
+   myjson:any ={name:"Guhan",age:27} //object
 
-    data:any =["Raja","Guhan", "Anbu", "Kamal",78678,"kesav"];//array
+  college:any ={    //object
+              sem1:[
+                       {name:"Raja",tamil:56,eng:67},
+                       {name:"anbu",tamil:67,eng:87}
 
-   // One way
-    getValue:string;
-    check(x:string)
-    {
-       this.getValue=x;
-    }
-
-    //Attribute binding
-    imageUrl:any="assets/images/swiggy-2.jpg";
-
-    getImage()
-    {
-      this.imageUrl="assets/images/facebook.JPG";
-    }
-
-     myid:any="p1";
-
-     myclass:any="c1";
-
+              ],
+              sem2:[
+                {name:"Rohit",tamil:56,eng:67},
+                {name:"mani",tamil:67,eng:87}
+              ]
+   }
 
 
 
