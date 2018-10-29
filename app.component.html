@@ -1,36 +1,8 @@
-<h2> Filter and Pipes </h2>
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+</h1>
+ 
+<p> {{ data }}  </p>
 
-<div class="container-fluid">
-
-<div class="row">
-  <div class="col-xs-6">
-
-    Search Data: <input [(ngModel)]="search.name"    placeholder="search by name" > <br>
-    Search Data: <input [(ngModel)]="search.tamil"    placeholder="search by tamil" > 
-     
-    <table id="customers">
-           <tr> <th>Name</th><th>Tamil</th><th>English</th></tr>
-           <tr  *ngFor="let list of college.sem1 | filterBy:search">
-               <td>
-                   {{list.name}}
-               </td>
-               <td>
-                 {{list.tamil}}
-               </td>
-               <td>
-                 {{list.eng}}
-               </td>
-
-           </tr>
-    </table>
-
-  </div>
-                
-
-</div>
-
-</div>
-
-
-
-
+<p> {{mark}}</p>
