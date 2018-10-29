@@ -1,55 +1,35 @@
+<h2> Routing </h2>
+
+<!-- By call directly using the selector of the child component
+
+<app-about>   </app-about>
+<app-dept> </app-dept>
+<app-lib> </app-lib>
+
+-->
 <div class="container-fluid">
-   <div class="row">
-      
-                  <div class="col-xs-4">
-                            <h2> Display the Json Data </h2>
-                            <p>{{myjson.name}}</p>
-                            <p>{{myjson.age}}</p>
 
-                        
+<div class="row">
+  <div class="col-xs-6" style="background-color:blueviolet;">
+                <router-outlet>
 
-                  </div>
+                          <ul>
+                          <!--  <li><a href="https://www.facebook.com/"> FB </a></li> -->
+                          <li><a routerLink="url1"> About </a></li>
+                          <li><a routerLink="url2">  Department </a></li>
+                          <li><a routerLink="url3"> Library </a></li>
+                            
+                          </ul>
 
-                  <div class="col-xs-4">
+                </router-outlet>
 
-                    <h2> Display json data in table</h2>
+</div>
 
-
-                    <table>
-                      <caption>Semester1</caption>
-                      <tr><th>Name</th><th>Tamil</th><th>English</th></tr>
-
-                        <tr *ngFor="let list of college.sem1">
-                          <td> {{list.name}}</td>
-                          <td>{{list.tamil}}</td>
-                          <td> {{list.eng}}</td>
-                          
-                        </tr>
-                    </table>
-
-
-
-                    
-                  </div>
-                  <div class="col-xs-4">
-                        
-                      <table>
-                          <caption>Semester2</caption>
-                          <tr><th>Name</th><th>Tamil</th><th>English</th></tr>
-    
-                            <tr *ngFor="let list of college.sem2">
-                              <td> {{list.name}}</td>
-                              <td>{{list.tamil}}</td>
-                              <td> {{list.eng}}</td>
-                              
-                            </tr>
-                        </table>
-                    
-                </div>
-
-
-   </div>
 
 
 
 </div>
+
+</div>
+
+
