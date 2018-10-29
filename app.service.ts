@@ -1,18 +1,19 @@
 import{Injectable} from '@angular/core';
+import{Http} from'@angular/http';
+import'rxjs/add/operator/map';
 
 @Injectable()
 
 export class AppService{
 
 
-    test()
-    {
-        return "Welcome to angular";
-    }
-
+     constructor(private obj:Http)
+     {
+       
+     }
     send()
     {
-        return 100;
+        return this.obj.get("https://jsonplaceholder.typicode.com/users").map(response=>response.json());
     }
 
 
